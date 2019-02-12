@@ -10,4 +10,14 @@ class TasksController extends Controller
     {
         return view('welcome');
     }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

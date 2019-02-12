@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'TasksController@index');
+
+Route::get('/contact', 'TasksController@contact');
