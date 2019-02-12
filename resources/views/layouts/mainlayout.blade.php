@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Whittington's Wheels</title>
+    <title>@yield('title', "Whittington's Wheels")</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -81,16 +81,17 @@
     @endif
 
     <div class="content">
+
         <div class="title m-b-md">
             Whittington's Wheels
         </div>
 
-        <div class="body m-b-md">
-            @yield('content')
-        </div>
+        @yield('content')
 
         <div class="links">
-            <a href="/about">About Us</a>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/showroom">Showroom</a>
             <a href="/contact">Contact</a>
             <a href="https://github.com/halfwhit/whits-wheels">GitHub</a>
         </div>

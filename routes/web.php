@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', 'TasksController@index');
+Route::get('/', 'PagesController@home');
 
-Route::get('/contact', 'TasksController@contact');
+Route::get('/about', 'PagesController@about');
+
+Route::get('/showroom', 'PagesController@showroom');
+
+Route::get('/contact', 'PagesController@contact');
+
+Route::get('/tasks', 'PagesController@tasks');
