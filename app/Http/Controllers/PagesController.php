@@ -26,16 +26,10 @@ class PagesController extends Controller
         return view('contact');
     }
 
-    public function tasks()
+    public function projects()
     {
-        $tasks = [
-            'Build site',
-            'Upload site to github',
-            'Push site to VPS'
-        ];
+        $projects = \App\Project::all();
 
-        return view('tasks', [
-            'tasks' => $tasks
-        ]);
+        return view('projects', ['projects' => $projects]);
     }
 }

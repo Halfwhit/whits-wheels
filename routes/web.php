@@ -13,10 +13,10 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('/about', 'PagesController@about');
+Route::get('about', 'PagesController@about');
 
-Route::get('/showroom', 'PagesController@showroom');
+Route::get('showroom', 'PagesController@showroom');
 
-Route::get('/contact', 'PagesController@contact');
+Route::get('contact', 'PagesController@contact');
 
-Route::get('/tasks', 'PagesController@tasks');
+Route::get('projects', 'PagesController@projects');
