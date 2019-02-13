@@ -19,4 +19,19 @@ Route::get('showroom', 'PagesController@showroom');
 
 Route::get('contact', 'PagesController@contact');
 
-Route::get('projects', 'PagesController@projects');
+Route::resource('projects', 'ProjectsController');
+/*
+Route::get('projects', 'ProjectsController@index');
+
+Route::get('projects/create', 'ProjectsController@create');
+
+Route::get('projects/{id}', 'ProjectsController@show');
+
+Route::post('projects', 'ProjectsController@store');
+
+Route::get('projects/{id}/edit', 'ProjectsController@edit');
+
+Route::patch('projects/{id}', 'ProjectsController@update');
+
+Route::delete('projects/{id}', 'ProjectsController@destroy');
+*/
