@@ -11,16 +11,19 @@
         {{csrf_field()}}
 
         <div>
-            <input type="text" name="title" placeholder="Project title">
+            <input type="text" name="title" placeholder="Project title" required value="{{old('title')}}">
         </div>
 
         <div>
-            <textarea name="description" placeholder="Project description"></textarea>
+            <textarea name="description" placeholder="Project description" required
+                      value="{{old('description')}}"></textarea>
         </div>
 
         <div>
             <button type="submit">Create Project</button>
         </div>
+
+        @include('include.errors')
 
     </form>
 

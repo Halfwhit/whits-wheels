@@ -61,6 +61,10 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        .is-complete {
+            text-decoration: line-through;
+        }
     </style>
 </head>
 
@@ -88,14 +92,7 @@
 
         @yield('content')
 
-        <div class="links">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/showroom">Showroom</a>
-            <a href="/contact">Contact</a>
-            <a href="/projects">Projects</a>
-            <a href="https://github.com/halfwhit/whits-wheels">GitHub</a>
-        </div>
+        @include('include.links')
     </div>
 </div>
 </body>

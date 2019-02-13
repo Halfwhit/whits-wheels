@@ -6,13 +6,13 @@
 
     <h1>Edit Project</h1>
 
-    <form method="post" action="/projects/{{$project->id}}" style="margin-bottom">
+    <form method="post" action="/projects/{{$project->id}}">
 
         {{ method_field('PATCH') }}
 
         {{csrf_field()}}
 
-        <div class="field">
+        <div class="field" style="margin-bottom: 24px">
 
             <label class="label" for="title">Title</label>
 
@@ -22,7 +22,7 @@
 
         </div>
 
-        <div class="field">
+        <div class="field" style="margin-bottom: 24px">
 
             <label class="label" for="description">Description</label>
 
@@ -41,7 +41,7 @@
 
     </form>
 
-    <form method="post" action="/projects/{{$project->id}}" style="margin-bottom">
+    <form method="post" action="/projects/{{$project->id}}" style="margin-bottom: 48px">
 
         {{method_field('DELETE')}}
 
@@ -51,5 +51,7 @@
             <button type="submit" class="button is-link">Delete Project</button>
         </div>
     </form>
+
+    @include('include.errors')
 
 @endsection
