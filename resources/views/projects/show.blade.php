@@ -22,9 +22,11 @@
         <div style="margin-bottom: 24px">
             @foreach($project->tasks as $task)
                 <div>
-                    <form method="POST" action="/tasks/{{$task->id}}">
+                    <form method="POST" action="/completed-tasks/{{$task->id}}">
+                        @if ($task->completed)
+                            @method('DELETE')
+                        @endif
 
-                        @method('PATCH')
                         @csrf
 
 
