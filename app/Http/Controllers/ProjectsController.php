@@ -7,26 +7,33 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $projects = \App\Project::all();
+        $projects = Project::where('owner_id', auth()->id())->get();
 
-        return view('projects.index', ['projects' => $projects]);
+        return view('homepage.projects.index', compact('projects'));
     }
 
     public function create()
     {
-        return view('projects.create');
+        return view('homepage.projects.create');
     }
 
     public function store()
     {
-        $attributes= request()->validate([
+        $attributes = request()->validate([
 
-            'title' => ['required', 'min:5'],
-            'description' => ['required', 'min:10']
+            'title' => ['required', 'min:3'],
+            'description' => ['required']
 
         ]);
+
+        $attributes['owner_id'] = auth()->id();
 
         Project::create($attributes);
 
@@ -35,12 +42,14 @@ class ProjectsController extends Controller
 
     public function show(Project $project)
     {
-        return view('projects.show', compact('project'));
+        $this->authorize('update', $project);
+
+        return view('homepage.projects.show', compact('project'));
     }
 
     public function edit(Project $project)
     {
-        return view('projects.edit', compact('project'));
+        return view('homepage.projects.edit', compact('project'));
     }
 
     public function update(Project $project)

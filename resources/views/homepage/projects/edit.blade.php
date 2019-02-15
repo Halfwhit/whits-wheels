@@ -34,7 +34,7 @@
         <div class="field">
 
             <div class="control">
-                <button type="submit" class="button is-link">Update Project</button>
+                <button type="submit" class="button is-link">Update Request</button>
             </div>
 
         </div>
@@ -48,7 +48,7 @@
         {{csrf_field()}}
 
         <div class="field">
-            <button type="submit" class="button is-link">Delete Project</button>
+            <button type="submit" class="button is-link">Delete Request</button>
         </div>
     </form>
 

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1>Projects</h1>
+    <h1>Wishlist Items</h1>
 
     @foreach ($projects as $project)
 
@@ -13,5 +13,13 @@
         </a>
 
     @endforeach
+
+    <form method="get" action="/projects/create" style="margin-top: 24px">
+        <div class="field">
+            <div class="control">
+                <button type="submit" class="button is-link">New Item</button>
+            </div>
+        </div>
+    </form>
 
 @endsection

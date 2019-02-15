@@ -13,13 +13,13 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('about', 'PagesController@about');
+Route::get('/about', 'PagesController@about');
 
-Route::get('showroom', 'PagesController@showroom');
+Route::get('/showroom', 'PagesController@showroom');
 
-Route::get('contact', 'PagesController@contact');
+Route::get('/contact', 'PagesController@contact');
 
-Route::resource('projects', 'ProjectsController');
+Route::resource('/projects', 'ProjectsController');
 
 
 
@@ -28,3 +28,9 @@ Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
 Route::post('/completed-tasks/{task}', 'CompletedTasksController@store');
 
 Route::delete('/completed-tasks/{task}', 'CompletedTasksController@destroy');
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

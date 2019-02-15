@@ -8,21 +8,21 @@ class PagesController extends Controller
 {
     public function home()
     {
-        return view('home');
+        return view('homepage.home');
     }
 
     public function about()
     {
-        return view('about');
+        return view('homepage.about');
     }
 
     public function showroom()
     {
-        return view('showroom');
+        return view('homepage.showroom');
     }
 
     public function contact()
     {
-        return view('contact');
+        return view('homepage.contact');
     }
 }

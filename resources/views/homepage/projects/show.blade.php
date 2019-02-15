@@ -12,7 +12,7 @@
         <div class="field">
 
             <div class="control">
-                <button type="submit" class="button is-link">Edit Project</button>
+                <button type="submit" class="button is-link">Edit Item</button>
             </div>
 
         </div>
