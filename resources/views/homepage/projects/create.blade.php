@@ -27,8 +27,7 @@
             <label class="label" for="description">Description</label>
 
             <div class="control">
-                <textarea name="description" placeholder="Detailed description" required
-                      value="{{old('description')}}"></textarea>
+                <textarea name="description" placeholder="Detailed description" required>{{old('description')}}</textarea>
             </div>
         </div>
 
