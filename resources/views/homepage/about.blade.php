@@ -4,29 +4,51 @@
 
 @section('content')
 
-    <div class="body m-b-md">
-
-        <h1>About Us</h1>
-
-        <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar bibendum aliquet. Etiam luctus
-            ullamcorper magna, sed blandit risus. Phasellus tincidunt neque vel pulvinar facilisis. Mauris eu ipsum
-            lacus. Sed tempor ipsum non tincidunt facilisis. Vestibulum semper, ex in lacinia vestibulum, libero augue
-            tristique urna, eu porttitor ante magna eget libero. Aenean nec magna aliquet, gravida elit non, aliquam
-            metus.
-        </h2>
-
-        <h2>
-            Curabitur rhoncus condimentum risus eget rhoncus. Aliquam pulvinar viverra mauris, et pharetra enim
-            vulputate non. Ut pellentesque ante arcu, non luctus magna tincidunt ut. Pellentesque condimentum non ex
-            quis auctor. Etiam molestie nunc ullamcorper lacus vulputate sollicitudin. Nulla vulputate ullamcorper
-            iaculis. Nunc nisl odio, fermentum et gravida vel, viverra id sem. Quisque fermentum aliquet nisl eget
-            consequat. Suspendisse sodales felis congue ipsum porttitor aliquam. Nam odio velit, efficitur vitae nisi
-            sed, tempus mattis tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-            mus. Nulla pretium ultrices elit quis euismod. Integer placerat eu neque eu dapibus. Vestibulum placerat
-            sapien id dui ullamcorper ullamcorper.
-        </h2>
-
+    <div class="card mb-3">
+        <div class="card-body bg-secondary text-white">
+            <h5 class="card-title">About Us</h5>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar bibendum aliquet. Etiam luctus
+                ullamcorper magna, sed blandit risus. Phasellus tincidunt neque vel pulvinar facilisis. Mauris eu ipsum
+                lacus. Sed tempor ipsum non tincidunt facilisis. Vestibulum semper, ex in lacinia vestibulum, libero augue
+                tristique urna, eu porttitor ante magna eget libero. Aenean nec magna aliquet, gravida elit non, aliquam
+                metus.
+            </p>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar bibendum aliquet. Etiam luctus
+                ullamcorper magna, sed blandit risus. Phasellus tincidunt neque vel pulvinar facilisis. Mauris eu ipsum
+                lacus. Sed tempor ipsum non tincidunt facilisis. Vestibulum semper, ex in lacinia vestibulum, libero augue
+                tristique urna, eu porttitor ante magna eget libero. Aenean nec magna aliquet, gravida elit non, aliquam
+                metus.
+            </p>
+        </div>
     </div>
-
+    <div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="/images/OwnerOne.jpg" alt="Owner One Picture">
+            <div class="card-body bg-secondary text-white">
+                <h5 class="card-title">Owner One</h5>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar bibendum aliquet. Etiam luctus
+                    ullamcorper magna, sed blandit risus. Phasellus tincidunt neque vel pulvinar facilisis. Mauris eu ipsum
+                    lacus. Sed tempor ipsum non tincidunt facilisis. Vestibulum semper, ex in lacinia vestibulum, libero augue
+                    tristique urna, eu porttitor ante magna eget libero. Aenean nec magna aliquet, gravida elit non, aliquam
+                    metus.
+                </p>
+            </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="/images/OwnerTwo.jpg" alt="Owner Two Picture">
+        <div class="card-body bg-secondary text-white">
+            <h5 class="card-title">Owner Two</h5>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar bibendum aliquet. Etiam luctus
+                ullamcorper magna, sed blandit risus. Phasellus tincidunt neque vel pulvinar facilisis. Mauris eu ipsum
+                lacus. Sed tempor ipsum non tincidunt facilisis. Vestibulum semper, ex in lacinia vestibulum, libero augue
+                tristique urna, eu porttitor ante magna eget libero. Aenean nec magna aliquet, gravida elit non, aliquam
+                metus.
+            </p>
+        </div>
+    </div>
+    </div>
 @endsection

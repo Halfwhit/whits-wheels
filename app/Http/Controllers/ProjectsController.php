@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\ProjectCreated;
 use App\Project;
 
 class ProjectsController extends Controller
@@ -32,7 +33,11 @@ class ProjectsController extends Controller
         ]);
 
         $attributes['owner_id'] = auth()->id();
-        Project::create($attributes);
+        $project = Project::create($attributes);
+
+        auth()->user()->notify(new ProjectCreated($project));
+
+
 
         return redirect('/projects');
     }
