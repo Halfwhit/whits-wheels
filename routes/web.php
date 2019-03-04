@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@splash');
+
+Route::get('/home', 'PagesController@home');
 
 Route::get('/about', 'PagesController@about');
 
@@ -19,7 +21,9 @@ Route::get('/showroom', 'PagesController@showroom');
 
 Route::get('/contact', 'PagesController@contact');
 
+
 Route::resource('/projects', 'ProjectsController');
+
 
 Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
 
@@ -28,12 +32,11 @@ Route::post('/completed-tasks/{task}', 'CompletedTasksController@store');
 Route::delete('/completed-tasks/{task}', 'CompletedTasksController@destroy');
 
 
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin/login', 'AdminController@logout');
+Route::get('/admin/logout', 'AdminController@logout');
 
 Route::get('/test', function() {
-    return view('test');
-
+    return view('homepage.admin');
 });

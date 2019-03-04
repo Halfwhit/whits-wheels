@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class PagesController extends Controller
 {
+    public function splash()
+    {
+        return view('homepage.splash');
+    }
+
     public function home()
     {
         return view('homepage.home');
